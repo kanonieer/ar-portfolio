@@ -1,0 +1,24 @@
+<div class="work-container">
+  <div class="work-images">
+    <div class="work-images__item" *ngFor="let image of work.image_file">
+        <cl-image
+          [public-id]="'arp/'+image"
+          class="thumbnail inline" 
+          format="jpg">
+          <cl-transformation 
+            [attr.width]="this.maxWidth"
+            [attr.height]="this.maxHeight"
+            crop="fit">
+          </cl-transformation>
+        </cl-image>
+    </div>
+  </div>
+  <div class="work-info">
+    <div class="work-info-text">
+        <h3>{{ this.work.name.pl }}</h3>
+        <p>{{ this.work.type.pl }}</p>
+        <p>{{ this.work.size }}cm</p>
+        <p>{{ this.work.year }}</p>
+    </div>
+  </div>
+</div>

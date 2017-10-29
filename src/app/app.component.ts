@@ -2,9 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'app';
+  public navVisible: Boolean;
+
+  constructor() {
+    this.navVisible = false;
+  }
+
+  public toggleNav(): void {
+    this.navVisible = !this.navVisible;
+    console.log(this.navVisible);
+  }
 }
