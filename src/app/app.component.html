@@ -3,10 +3,10 @@
   [style.top]="this.navVisible ? '0' : '-175px'">
   <nav class="header-navbar">
     <ul class="header-navbar__list">
-      <li class="header-navbar__list-item">Home</li>
-      <li class="header-navbar__list-item">About</li>
-      <li class="header-navbar__list-item">Portfolio</li>
-      <li class="header-navbar__list-item">Contact</li>
+      <li class="header-navbar__list-item" [scrollTo]="'home'">Home</li>
+      <li class="header-navbar__list-item" [scrollTo]="'about'">About</li>
+      <li class="header-navbar__list-item" [scrollTo]="'portfolio'">Portfolio</li>
+      <li class="header-navbar__list-item" [scrollTo]="'contact'">Contact</li>
     </ul>
     <i class="fa fa-angle-double-down" *ngIf="!this.navVisible" aria-hidden="true" (click)="toggleNav()"></i>
     <i class="fa fa-angle-double-up" *ngIf="this.navVisible" aria-hidden="true" (click)="toggleNav()"></i>

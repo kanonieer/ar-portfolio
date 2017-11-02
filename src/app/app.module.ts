@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Cloudinary } from 'cloudinary-core';
 import { CloudinaryModule } from '@cloudinary/angular-4.x';
+import { SmoothScrollToDirective, SmoothScrollDirective } from 'ng2-smooth-scroll';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -26,7 +27,9 @@ const cloudinaryLib = {
     AboutComponent,
     PortfolioComponent,
     ContactComponent,
-    WorkComponent
+    WorkComponent,
+    SmoothScrollToDirective,
+    SmoothScrollDirective
   ],
   imports: [
     CloudinaryModule.forRoot(cloudinaryLib, cloudConfig),

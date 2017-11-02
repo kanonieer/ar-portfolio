@@ -1,7 +1,7 @@
 import { Work } from './../models/work';
 
 export const data: Array<Work> = [
-     // { image_file: '', name: { pl: '', en: '' }, size: '', type: { pl: '', en: ''}, series: '', year: 2016, order: 1 },
+    //  { image_file: '', name: { pl: '', en: '' }, size: '', type: { pl: '', en: ''}, series: '', year: 2016, order: 1 },
     { image_file: ['arp-0002'], name: { pl: 'Tempus Fugit', en: 'Tempus Fugit' }, size: '50x70', type: { pl: 'asamblaż', en: 'assamblage' }, series: 'ZNS', year: 2016, order: 2 },
     { image_file: ['arp-0003'], name: { pl: 'Melatonina', en: 'Melatonina' }, size: '50x70', type: { pl: 'asamblaż', en: 'assamblage' }, series: 'ZNS', year: 2016, order: 5 },
     { image_file: ['arp-0004'], name: { pl: 'ID', en: 'ID' }, size: '50x70', type: { pl: 'asamblaż', en: 'assamblage' }, series: 'ZNS', year: 2017, order: 7 },
