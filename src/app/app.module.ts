@@ -11,6 +11,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { WorkComponent } from './work/work.component';
 import { WorkService } from './portfolio/work.service';
+import { WorkModalComponent } from './work-modal/work-modal.component';
+import { WindowSizeService } from './services/window-size.service';
 
 const cloudConfig = {
   cloud_name: 'dzgtgeotp'
@@ -29,13 +31,17 @@ const cloudinaryLib = {
     ContactComponent,
     WorkComponent,
     SmoothScrollToDirective,
-    SmoothScrollDirective
+    SmoothScrollDirective,
+    WorkModalComponent
   ],
   imports: [
     CloudinaryModule.forRoot(cloudinaryLib, cloudConfig),
     BrowserModule
   ],
-  providers: [WorkService],
+  providers: [
+    WorkService,
+    WindowSizeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

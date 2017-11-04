@@ -1,13 +1,13 @@
-<div class="work-container">
-  <div class="work-images" (click)="this.showModal()">
+<div class="work-modal-container">
+  <div class="work-images">
     <div class="work-images__item" *ngFor="let image of work.image_file">
         <cl-image
           [public-id]="'arp/'+image"
           class="thumbnail inline" 
           format="jpg">
           <cl-transformation 
-            [attr.width]="this.maxWidth"
-            [attr.height]="this.maxHeight"
+            [attr.width]="width"
+            [attr.height]="height"
             crop="fit">
           </cl-transformation>
         </cl-image>
@@ -22,10 +22,6 @@
     </div>
   </div>
 </div>
-<app-work-modal
- (hide)="this.hideModal()"
- [work]="work"
- [width]="maxWidth"
- [height]="maxHeight"
- *ngIf="this.modalVisible"
- ></app-work-modal>
+<button class="work-modal-hide-btn" (click)="this.hideModal()">
+  <i class="fa fa-times" aria-hidden="true"></i>
+</button>
